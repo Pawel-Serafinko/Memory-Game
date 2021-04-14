@@ -12,7 +12,6 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* overflow: hidden; */
 }
 
 #gameMemoryContainer,
@@ -476,11 +475,6 @@ body {
     .info {
         width: 300px;
     }
-    /* .startGame p,
-    .reloadGame p,
-    .info p {
-        font-size: 2vh;
-    } */
 }
 
 @media (max-width: 642px) {
@@ -585,5 +579,33 @@ body {
         100% {
             transform: translate(-50%, -50%) scale(0.6);
         }
+    }
+
+    .one {
+        border: rgb(90, 73, 54) outset 4px;
+    }
+
+    .two {
+        border: rgb(231, 155, 12) outset 4px;
+    }
+
+    .three {
+        border: rgb(253, 195, 33) outset 4px;
+    }
+
+    .four {
+        border: rgb(216, 124, 144) outset 4px;
+    }
+
+    .fife {
+        border: rgb(30, 98, 161) outset 4px;
+    }
+
+    .six {
+        border: rgb(63, 75, 83) outset 4px;
+    }
+
+    .hidden {
+        border: var(--colorButton) outset 4px;
     }
 }
