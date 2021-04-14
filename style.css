@@ -548,7 +548,7 @@ body {
 
     @keyframes downInfo {
         0% {
-            transform: translate(-50%, -433vh);
+            transform: translate(-50%, -43vh);
         }
 
         100% {
