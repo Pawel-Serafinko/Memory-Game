@@ -22,9 +22,14 @@ const coverOwl = document.querySelector(".coverOwl");
 const info = document.querySelector(".info");
 const winn = document.querySelector(".winn");
 const reload = document.querySelector(".reloadGame");
+const timeGame = document.querySelector(".time div");
 
 let activeCard = "";
 const activeCards = [];
+
+let time = 0;
+let activeTime = false;
+let idInterval;
 
 const gamePairs = cards.length / 2;
 let gameResult = 0;
@@ -49,6 +54,7 @@ const clickCard = function () {
                     winn.classList.add("winner");
                     reload.classList.add("reloadUp");
                     info.classList.add("infoDown");
+                    clearInterval(idInterval);
                     reload.addEventListener("click", () => {
                         location.reload();
                     });
@@ -69,6 +75,8 @@ const init = () => {
         info.classList.add("infoUp");
         coverOwl.classList.add("coverOwlAcive");
 
+        idInterval = setInterval(timeGo, 1000);
+
         cards.forEach((card) => {
             cards.forEach((card) => {
                 const position = Math.floor(Math.random() * cardsChoice.length);
@@ -79,5 +87,10 @@ const init = () => {
             card.addEventListener("click", clickCard);
         });
     });
+    const timeGo = () => {
+        time++;
+        timeGame.textContent = time;
+    };
 };
+
 init();

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     --colorOwl: rgb(90, 73, 54);
     --colorButton: rgb(148, 125, 98);
@@ -10,7 +11,7 @@ body {
 
 .s1 {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -62,7 +63,6 @@ body {
     top: 40%;
     height: 65vh;
     width: 65vh;
-    /* background-color: antiquewhite; */
 }
 
 .owlContainer .owl {
@@ -221,18 +221,59 @@ body {
         0px -2px 5px 1px rgba(30, 30, 30, 0.6);
 }
 
+.time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 35vh);
+    width: 600px;
+    height: 10vh;
+    border-radius: 0 0 2vh 2vh;
+    background-image: linear-gradient(
+        to top,
+        rgb(112, 84, 52) 30%,
+        rgb(138, 111, 80) 60%,
+        rgb(116, 71, 21) 80%,
+        rgb(177, 149, 117) 100%
+    );
+    box-shadow: 0px -5px 5px 1px rgba(95, 58, 15, 0.747) inset,
+        0px 3px 5px 1px rgb(107, 79, 47) inset,
+        0px 2px 5px 1px rgba(30, 30, 30, 0.6);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .startGame p,
 .reloadGame p,
-.info p {
+.info p,
+.time p,
+.time div {
     font-family: "Shadows Into Light", cursive;
     font-weight: bold;
     color: rgb(240, 240, 240);
     font-size: 3vh;
-    line-height: 7vh;
     letter-spacing: 3px;
     word-spacing: 5px;
     text-transform: uppercase;
     text-shadow: 1px 2px #353535;
+}
+
+.startGame p,
+.reloadGame p,
+.info p {
+    line-height: 7vh;
+}
+
+.time p {
+    line-height: 12vh;
+}
+
+.time div {
+    font-size: 4.5vh;
+    line-height: 11vh;
+    letter-spacing: 10px;
 }
 
 .gameMemory p {
@@ -477,6 +518,9 @@ body {
     .info {
         width: 300px;
     }
+    .time {
+        width: 400px;
+    }
 }
 
 @media (max-width: 642px) {
@@ -485,10 +529,27 @@ body {
     .info {
         width: 200px;
     }
+
+    .time {
+        width: 270px;
+        justify-content: center;
+    }
+
     .startGame p,
     .reloadGame p,
     .info p {
         font-size: 2vh;
+    }
+
+    .time p {
+        font-size: 2vh;
+    }
+
+    .time div {
+        width: 90px;
+        font-size: 3vh;
+        line-height: 12vh;
+        letter-spacing: 5px;
     }
 }
 
@@ -496,9 +557,10 @@ body {
     .startGame,
     .reloadGame,
     .info {
-        width: 220px;
+        width: 200px;
         height: 8vh;
     }
+
     .startGame {
         transform: translate(-50%, -43vh);
     }
@@ -509,10 +571,27 @@ body {
         font-size: 1.9vh;
         line-height: 5.5vh;
     }
+
     #gameMemoryContainer .gameContainer div {
         position: relative;
         width: 28%;
         height: 21%;
+    }
+
+    .time {
+        width: 200px;
+        justify-content: center;
+    }
+
+    .time p {
+        font-size: 1.5vh;
+    }
+
+    .time div {
+        width: 60px;
+        font-size: 2.5vh;
+        line-height: 11.5vh;
+        letter-spacing: 5px;
     }
 
     .startDown {
@@ -528,6 +607,7 @@ body {
             transform: translate(-50%, -30vh);
         }
     }
+
     .infoUp {
         animation: upInfo linear 1s 0.5s normal both;
     }
