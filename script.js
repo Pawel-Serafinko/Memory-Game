@@ -7,8 +7,8 @@ const cardsChoice = [
     "three",
     "four",
     "four",
-    "fife",
-    "fife",
+    "five",
+    "five",
     "six",
     "six",
 ];
@@ -78,11 +78,10 @@ const init = () => {
         idInterval = setInterval(timeGo, 1000);
 
         cards.forEach((card) => {
-            cards.forEach((card) => {
-                const position = Math.floor(Math.random() * cardsChoice.length);
-                card.classList.add(cardsChoice[position]);
-                cardsChoice.splice(position, 1);
-            });
+            const position = Math.floor(Math.random() * cardsChoice.length);
+            card.classList.add(cardsChoice[position]);
+            cardsChoice.splice(position, 1);
+
             card.classList.add("hidden");
             card.addEventListener("click", clickCard);
         });
