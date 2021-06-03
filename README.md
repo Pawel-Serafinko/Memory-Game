@@ -21,3 +21,7 @@ Mobile
 
 Here you will find the link to Memory_Game
 (https://pawel-serafinko.github.io/Memory-Game/)
+
+## What I have learned and what obstacles I encountered
+
+This is my first project in which I combined several actions in JavaScript, mixing elements, countdown time, delay action, search for the same elements. In CSS I tried to maximize the use of complex selectors as well as used variables for colors. Creating a fully responsive application was an interesting challenge.
