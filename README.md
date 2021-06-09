@@ -14,7 +14,7 @@ Mobile
 ## Technologies
 
 * HTML5
-* SCSS
+* CSS
 * JavaScript
 
 ## Link
