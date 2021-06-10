@@ -45,6 +45,7 @@ const clickCard = function () {
     } else {
         cards.forEach((card) => card.removeEventListener("click", clickCard));
         activeCards[1] = activeCard;
+
         setTimeout(() => {
             if (activeCards[0].className === activeCards[1].className) {
                 activeCards.forEach((card) => card.classList.add("off"));
@@ -62,6 +63,7 @@ const clickCard = function () {
             } else {
                 activeCards.forEach((card) => card.classList.add("hidden"));
             }
+
             activeCard = "";
             activeCards.length = 0;
             cards.forEach((card) => card.addEventListener("click", clickCard));
@@ -86,6 +88,7 @@ const init = () => {
             card.addEventListener("click", clickCard);
         });
     });
+
     const timeGo = () => {
         time++;
         timeGame.textContent = time;

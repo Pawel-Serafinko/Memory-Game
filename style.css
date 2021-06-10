@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+:root {
     --colorOwl: rgb(90, 73, 54);
     --colorButton: rgb(148, 125, 98);
 }
@@ -15,7 +15,7 @@ body {
     height: 100vh;
 }
 
-#gameMemoryContainer,
+.gameMemoryContainer,
 .owlContainer,
 .owl,
 .owlBody,
